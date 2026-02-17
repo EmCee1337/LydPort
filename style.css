@@ -178,3 +178,16 @@ body {
     transform: translateY(0);
 }
 
+/* HERO FADE-IN */
+#hero h1, #hero p {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+#hero.is-visible h1,
+#hero.is-visible p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
