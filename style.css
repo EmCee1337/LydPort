@@ -88,7 +88,7 @@ h2 {
 }
 
 /* SHOWREEL */
-#showreel div {
+.showreel-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,6 +157,10 @@ audio {
 
 /* CONTACT */
 #contact p {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 10px;
 }
 
