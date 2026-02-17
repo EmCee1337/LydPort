@@ -62,12 +62,20 @@ nav a:hover {
     font-size: 4rem;
     font-weight: 300;
     letter-spacing: 3px;
+    text-align: center;
 }
 
 #hero p {
     margin-top: 20px;
     font-size: 1.2rem;
     color: #aaaaaa;
+    text-align: center;
+}
+
+#statement p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
 }
 
 /* HEADINGS */
@@ -76,10 +84,15 @@ h2 {
     font-size: 2rem;
     margin-bottom: 40px;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 /* SHOWREEL */
 #showreel div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -94,23 +107,26 @@ h2 {
 .work-item {
     border: 1px solid #222;
     padding: 30px;
-    transition: transform 0.3s ease, border 0.3s ease;
+    transition: transform 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
 }
 
 .work-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border: 1px solid #444;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .work-item h3 {
     margin-bottom: 15px;
     font-weight: 400;
+    text-align: center;
 }
 
 .work-item p {
     font-size: 0.9rem;
     color: #cccccc;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .work-item a {
@@ -132,6 +148,13 @@ audio {
     margin-top: 20px;
 }
 
+#audio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 /* CONTACT */
 #contact p {
     margin-bottom: 10px;
@@ -141,3 +164,17 @@ audio {
 body {
     padding-top: 80px;
 }
+
+/* FADE-IN ON SCROLL */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
