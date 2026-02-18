@@ -25,5 +25,33 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+  
+    // MODAL FUNCTIONALITY
+    const modal = document.getElementById("videoModal");
+    const modalVideo = document.getElementById("modalVideo");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".open-modal").forEach(button => {
+    button.addEventListener("click", function(e) {
+        e.preventDefault();
+        const videoSrc = this.getAttribute("data-video");
+        modalVideo.src = videoSrc + "?autoplay=1";
+        modal.style.display = "flex";
+    });
+    });
+
+    // Close modal
+    closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    modalVideo.src = "";
+    });
+
+    // Close when clicking outside
+    modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+        modalVideo.src = "";
+    }
+    });
 
 });
