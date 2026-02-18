@@ -57,7 +57,7 @@
                 <p><strong>Role:</strong> Lorem Ipsum</p>
                 <p><strong>Director:</strong> Lorem Ipsum</p>
                 <p>Perigrafi Project 1</p>
-                <a href="#">Link pou tha anoigei ena mini parathiraki me fotos/video klp.</a>
+                <a href="#" class="open-modal">Link pou tha anoigei ena mini parathiraki me fotos/video klp.</a>
             </article>
 
             <article class="work-item">
@@ -65,7 +65,7 @@
                 <p><strong>Role:</strong> Lorem Ipsum</p>
                 <p><strong>Director:</strong> Lorem Ipsum</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-                <a href="#" class="open-modal">View Excerpt</a>
+                <a href="#" class="open-modal" data-title="Project 1 Best Project Ever" data-content="This work explores the best play ever enacted">View Excerpt</a>
             </article>
 
             <article class="work-item">
@@ -73,7 +73,7 @@
                 <p><strong>Role:</strong> Lorem Ipsum</p>
                 <p><strong>Director:</strong> Lorem Ipsum</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-                <a href="#">View Excerpt</a>
+                <a href="#" class="open-modal">View Excerpt</a>
             </article>
 
         </div>
@@ -108,12 +108,14 @@
 
         
   <!-- MODAL -->
-   <div id="videoModal" class="modal">
-    <div class="modal-cotent">
+   <div id="texModal" class="modal">
+    <div class="modal-cotent text-modal">
       <span class="close">&times;</span>
-      <iframe id="modalVideo" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
     </div>
    </div>
+   
   <script src="script.js"></script>
 </body>
 </html>
